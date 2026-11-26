@@ -23,10 +23,18 @@ public class Main {
         light.turnOff();
         fan.turnOff();
         ac.turnOff();
+        System.out.println();
 
         //Configuration Manager instance
-        ConfigurationManager config1 = ConfigurationManager.getInstance();
-        ConfigurationManager config2 = ConfigurationManager.getInstance();
+        ConfigurationManager config1
+                = ConfigurationManager.getInstance();
+
+        config1.setHomeName("SmartHome");
+
+        ConfigurationManager config2
+                = ConfigurationManager.getInstance();
+
+        System.out.println("Home Name: " + config2.getHomeName());
 
         System.out.println(config1 == config2);
     }

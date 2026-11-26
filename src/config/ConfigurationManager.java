@@ -18,4 +18,16 @@ public class ConfigurationManager {
         }
         return instance;
     }
+
+    //Additional configuration method
+    private String homeName;
+
+    //Getter and Setter for homeName
+    public void setHomeName(String name) {
+        this.homeName = name;
+    }
+
+    public String getHomeName() {
+        return this.homeName;
+    }
 }
