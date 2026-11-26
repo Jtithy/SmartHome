@@ -1,10 +1,13 @@
 //Import devices
 
+import config.ConfigurationManager;
 import devices.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        //Smart Device instances
         SmartDevice light = new Light();
         SmartDevice fan = new Fan();
         SmartDevice ac = new AC();
@@ -21,5 +24,10 @@ public class Main {
         fan.turnOff();
         ac.turnOff();
 
+        //Configuration Manager instance
+        ConfigurationManager config1 = ConfigurationManager.getInstance();
+        ConfigurationManager config2 = ConfigurationManager.getInstance();
+
+        System.out.println(config1 == config2);
     }
 }
