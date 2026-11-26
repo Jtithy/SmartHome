@@ -1,5 +1,10 @@
 package devices;
 
-public class SmartDevice {
+public interface SmartDevice {
 
+    void turnOn();
+
+    void turnOff();
+
+    String getStatus();
 }
