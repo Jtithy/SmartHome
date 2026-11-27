@@ -1,3 +1,6 @@
+// ConfigurationManager.java
+// This class is responsible for managing the application's configuration.
+// It implements the Singleton design pattern to ensure that only one instance of the configuration manager exists throughout the application lifecycle.
 package config;
 
 public class ConfigurationManager {
