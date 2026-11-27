@@ -2,6 +2,7 @@
 
 import config.ConfigurationManager;
 import devices.*;
+import factory.DeviceFactory;
 
 public class Main {
 
@@ -37,5 +38,19 @@ public class Main {
         System.out.println("Home Name: " + config2.getHomeName());
 
         System.out.println(config1 == config2);
+
+        //Device Factory usage
+        SmartDevice factoryLight = DeviceFactory.createDevice("Light");
+        SmartDevice factoryFan = DeviceFactory.createDevice("Fan");
+        SmartDevice factoryAC = DeviceFactory.createDevice("AC");
+
+        System.out.println("Factory Light status: " + factoryLight.getStatus());
+        System.out.println("Factory Fan status: " + factoryFan.getStatus());
+        System.out.println("Factory AC status: " + factoryAC.getStatus());
+        System.out.println();
+
+        factoryLight.turnOn();
+        factoryFan.turnOn();
+        factoryAC.turnOn();
     }
 }
